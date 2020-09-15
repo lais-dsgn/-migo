@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migo</title>
+
+    <!------------Font Awesome Icones----------->
+    <link rel="stylesheet" href="./css/all.css">
+    <!------------------------------------------>
+    
+    <!-----------------Estilo------------------->
+    <link rel="stylesheet" href="/css/style.css">
+    <!------------------------------------------>
+
+    
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <div class="nav-menu  flex-row">
+                <div class="nav-brand">
+                    <img src="imagens/logo1.png">
+                </div>
+                <div class="toggle-collapse">
+                    <div class="toggle-icons">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div>
+                    <ul class="nav-itens">
+                        <li class="nav-link">
+                            <a href="#">Início</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Tipos de Seguro</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Quem somos</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li class="nav-cta">
+                            <a href="#" id="nav-cta">Fazer Simulação</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+<!----------------------------------------------------------------->
+<!------------------------Main Site section------------------------>
+
+<main>
+    <!------------------Site Title------------------->
+    <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                <h1>Seguro para <br> bicicletas e ciclistas.</h1>
+                <p>A Migo oferece seguros para qualquer tipo de bicicleta e ciclista. <br> Tudo 100% online e pronto para qualquer momento.</p>
+                <button class="btn">Fazer Simulação</button>
+            </div>
+            <img src="/imagens/ilustra.png" class="ilustra">
+        
+    </section>
+    <section class="container-flex">
+        <div class="item">
+            <img src="/imagens/icon-equip.png" alt="Equipamentos" class="icon-equip">
+            <h3>seguro para</h3>
+            <h1>Equipamentos</h1>
+            <h3>Para que querem ter certeza que todos os <br> equipamentos como capacete serão <br> segurados!</h3>
+        </div>
+
+        <div class="item">
+            <img src="/imagens/icon-bike.png" alt="Bikes" class="icon-bike">
+            <h3>seguro para</h3>
+            <h1>Bikes</h1>
+            <h3>Indicado para quem quer pedalar sem se<br> preocupar nos bens materiais!</h3>
+        </div>
+
+        <div class="item">
+            <img src="/imagens/icon-ciclista.png" alt="Ciclistas" class="icon-ciclista">
+            <h3>seguro para</h3>
+            <h1>Ciclistas</h1>
+            <h3>Indicado para todos que querem ter<br> segurança pessoal ao fazer seus passeios!</h3>
+        </div>
+    </section>
+
+</main>
+
+<!-----JQUERY JAVA----->
+<script src="/js/Jquery3.4.1.min.js"></script>
+
+<!-----JAVA----->
+<script src="/js/main.js"></script>
+
+
+<!----------------------------------------------------------------->
+<!---SCROLL---->
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+    })
+</script>
+<!----------------------------------------------------------------->
+
+</body>
+
+</html>

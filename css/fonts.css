@@ -1,0 +1,19 @@
+/*--- font-family: Circular ---*/
+@font-face{
+    font-family: Circular;
+    src: url('/Fonts/Circular/CircularStd-Book.otf')
+}
+
+/*--- font-family: Hind ---*/
+@font-face{
+    font-family: Hind;
+    src: url('/Fonts/Hind/Hind-Regular.ttf')
+}
+
+/*--- font-family: Space Mono ---*/
+@font-face{
+    font-family: Mono;
+    src: url('/Fonts/SpaceMono/SpaceMono-Bold.ttf')
+}
+
+

@@ -1,0 +1,336 @@
+
+@import url('../css/fonts.css');
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+/*     ROOT     */
+
+:root{
+    /*     Cores     */
+    --txt-pink: #FF3E6C ;
+    --txt-rosa: #FFE8E0;
+    --txt-azul: #030047;
+
+    /*     Font-Family     */
+    --Circular: 'Circular', cursive;
+    --Hind: 'Hind', cursive;
+    --Mono: 'Mono', cursive;
+}
+
+/*     FIM     */
+
+
+/*-------------------------------------*/
+
+/*     GLOBAL CLASSES     */
+
+
+
+a{
+    text-decoration: none;
+    color: var(--txt-azul);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+h1{
+    font-family: var(--Circular);
+    font-size: 3.5rem;
+}
+
+h2{
+    font-family: var(--Mono);
+    font-size: 1.5rem;
+}
+
+h3{
+    font-family: var(--Hind);
+    font-size:1rem;
+}
+
+p{
+    font-family: var(--Circular);
+    color: var(--txt-azul);
+    font-size: 1rem;
+}
+
+
+/*     FIM     */
+
+
+/*-------------------------------------*/
+/*          NAVBAR          */
+/*     antes do scroll     */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    position: fixed;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+.nav{
+    padding: 0 1rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height .5s ease-in ;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--txt-azul);
+}
+
+.collapse{
+    background-color: white;
+    height: 30rem;
+}
+
+.nav .nav-itens{
+    display: flex;
+    margin: 0; 
+}
+
+
+.nav .nav-itens .nav-link{
+    padding: 1.6rem 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    font-family: var(--Hind);
+    
+}
+
+.nav .nav-brand img{
+    float: left;
+    position: fixed;
+    display: block;
+    width: 6rem;
+    top: 1rem;
+    padding: 0 1.1rem;
+    
+}
+
+/*-------------------------------------*/
+/*     SCROLL     */
+
+.nav-itens .nav-link::after{
+    background-color: #fff;
+    position: flex;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-itens .nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+.nav-cta{
+    padding: 1.4rem 1rem;
+    position: relative;
+}
+
+#nav-cta{
+    display: inline-block;
+    background-color: var(--txt-pink);
+    color: #fff;
+    margin: 0 2rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-family: var(--Mono);
+    font-size: 1rem;
+    transition: background-color .5s ease;
+}
+
+#nav-cta:hover{
+    background-color: #e6335d;
+}
+
+/*     EDIT     */
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+
+.scrolling-active .nav{
+    height: 5rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active #nav-cta{
+    background-color: var(--txt-pink);
+    color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+    background-color:#e6335d;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: var(--txt-pink);
+}
+
+/*     FIM NAVBAR     */
+
+
+/*-----------------------------------------------*/
+/*     750px     */
+
+@media only screen and (max-width: 1330px){
+    .nav .nav-menu, .nav .nav-itens{
+        flex-direction: column;
+    }
+
+    .nav-link{
+        top: 10vh;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+}
+
+
+/*-----------------------------------------------*/
+
+/*     MAIN     */
+
+/*     Site title     */
+
+main .site-title{
+    background: url('/imagens/Union.png') left top no-repeat;
+    background-size: 90vh;
+    margin-top: 0rem;
+    height: 150vh;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.ilustra{
+    height: 72vh;
+    position: absolute;
+    bottom: 0%;
+    left: 15vh;
+    top: 25vh;
+}
+
+
+main .site-title .site-background{
+    padding-top: 15rem;
+    padding-right: 10rem;
+    text-align: left;
+    color: var(--txt-azul);
+}
+
+main .site-title p{
+    color: #4F4F4F;
+}
+
+main .site-title h1, p{
+    font-weight: 100;
+    margin: .3rem;
+
+}
+
+
+.btn {
+    margin-top: 2rem;
+	background-color: var(--txt-pink);
+	border-radius: 20px;
+	border:1px solid var(--txt-pink);
+	display:inline-block;
+	cursor:pointer;
+	color: #fdf7f5;
+	font-family: var(--Mono);
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.btn:hover {
+	background-color: #e6335d;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+/*------------------------------------------------*/
+/*     Seguros     */
+
+.item{
+    flex: 1;
+    margin-left: 3rem;
+    background: white;
+    align-items: center;
+}
+
+.container-flex{
+    max-width: 100%;
+    background: white;
+    border: 1rem, solid white;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+
+}
